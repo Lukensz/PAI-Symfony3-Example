@@ -41,8 +41,23 @@ class Product
      * @ORM\Column(name="description", type="text")
      */
     private $description;
-
-
+	
+	/**
+	 * @var string
+	 *
+	 * @ORM\Column(name="author", type="text")
+	 */
+	private $author;
+	
+	/**
+	 * @var string
+	 *
+	 * @ORM\Column(name="genre", type="text")
+	 */
+	 private $genre;
+	 
+	 
+	 
     /**
      * Get id
      *
@@ -124,5 +139,52 @@ class Product
     {
         return $this->description;
     }
+	
+	/**
+	 * Get author
+	 *
+	 * @return string
+	 */
+	public function getAuthor()
+	{
+		return $this->author;
+	}
+	
+	/**
+	 * Set author
+	 * 
+	 * @param string $author
+	 *
+	 * @return Product
+	 */
+	public function setAuthor($author)
+	{
+		$this->author = $author;
+		return $this;
+	}
+	
+	/**
+	 * Get genre
+	 * 
+	 * @return string
+	 */
+	public function getGenre()
+	{
+		return $this->genre;
+	}
+	
+	/**
+	 * Set genre
+	 *
+	 * @param string $genre
+	 *
+	 * @return Product
+	 */
+	public function setGenre($genre)
+	{
+		$this->genre = $genre;
+		return $this;
+	}
+	
 }
 

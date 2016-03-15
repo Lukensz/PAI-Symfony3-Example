@@ -18,6 +18,8 @@ class AddType extends AbstractType
 			->add('name', TextType::class)
 				->add('price', MoneyType::class)
 				->add('description', TextareaType::class)
+				->add('genre', TextType::class)
+				->add('author', TextType::class)
 		;
 	}
 	
